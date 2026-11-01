@@ -1,0 +1,25 @@
+[project]
+name        = "fh-presentation-allan"
+version     = "1.0.0"
+description = "Soutenance de formation humaine X2025 d'Allan Tamo"
+requires-python = ">=3.13"
+dependencies = [
+    "python-pptx>=1.0",
+    "matplotlib>=3.8",
+    "Pillow>=10.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+render = "scripts.render:main"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires      = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "scripts"
+module-root = ""
